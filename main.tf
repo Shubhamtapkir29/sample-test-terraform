@@ -11,7 +11,7 @@ terraform {
 resource "local_file" "myfile" {
 
  filename= var.filename
- content= "new content added"
+ content= var.content
  file_permission= var.file_permission
  
 
