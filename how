@@ -1,0 +1,135 @@
+[1mdiff --git a/main.tf b/main.tf[m
+[1mindex 58304af..54f16bc 100644[m
+[1m--- a/main.tf[m
+[1m+++ b/main.tf[m
+[36m@@ -11,7 +11,7 @@[m [mterraform {[m
+ resource "local_file" "myfile" {[m
+ [m
+  filename= var.filename[m
+[31m- content= var.content[m
+[32m+[m[32m content= "new content added"[m
+  file_permission= var.file_permission[m
+  [m
+ [m
+[1mdiff --git a/shubham.html b/shubham.html[m
+[1mnew file mode 100755[m
+[1mindex 0000000..7f912bf[m
+[1m--- /dev/null[m
+[1m+++ b/shubham.html[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mhi shubham[m
+\ No newline at end of file[m
+[1mdiff --git a/terraform.tfstate b/terraform.tfstate[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0c51ff1[m
+[1m--- /dev/null[m
+[1m+++ b/terraform.tfstate[m
+[36m@@ -0,0 +1,51 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "version": 4,[m
+[32m+[m[32m  "terraform_version": "1.14.0",[m
+[32m+[m[32m  "serial": 7,[m
+[32m+[m[32m  "lineage": "beef9393-0982-800f-dce5-7fb77c8ac38f",[m
+[32m+[m[32m  "outputs": {[m
+[32m+[m[32m    "output1": {[m
+[32m+[m[32m      "value": "shubham.html",[m
+[32m+[m[32m      "type": "string"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "resources": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "mode": "managed",[m
+[32m+[m[32m      "type": "local_file",[m
+[32m+[m[32m      "name": "myfile",[m
+[32m+[m[32m      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",[m
+[32m+[m[32m      "instances": [[m
+[32m+[m[32m        {[m
+[32m+[m[32m          "schema_version": 0,[m
+[32m+[m[32m          "attributes": {[m
+[32m+[m[32m            "content": "hi shubham",[m
+[32m+[m[32m            "content_base64": null,[m
+[32m+[m[32m            "content_base64sha256": "hpAU0zPnjNO56orpI+IBHG3+9sBCqnDj2oVIRZ6Bq1A=",[m
+[32m+[m[32m            "content_base64sha512": "CJwrl891G7+HIzdPqTuiWUnp3WlZfLE3BjkTXQ7d92pNdPuu9bCYxzacbFXd6o+7gZNKh6O3o9c1B4z9FY/2MA==",[m
+[32m+[m[32m            "content_md5": "160ab3fd7f9215c739f87b6f80ef1f76",[m
+[32m+[m[32m            "content_sha1": "114c73a8c50f12b98c3e4bd684f62ff4cd00e469",[m
+[32m+[m[32m            "content_sha256": "869014d333e78cd3b9ea8ae923e2011c6dfef6c042aa70e3da8548459e81ab50",[m
+[32m+[m[32m            "content_sha512": "089c2b97cf751bbf8723374fa93ba25949e9dd69597cb1370639135d0eddf76a4d74fbaef5b098c7369c6c55ddea8fbb81934a87a3b7a3d735078cfd158ff630",[m
+[32m+[m[32m            "directory_permission": "0777",[m
+[32m+[m[32m            "file_permission": "0777",[m
+[32m+[m[32m            "filename": "shubham.html",[m
+[32m+[m[32m            "id": "114c73a8c50f12b98c3e4bd684f62ff4cd00e469",[m
+[32m+[m[32m            "sensitive_content": null,[m
+[32m+[m[32m            "source": null[m
+[32m+[m[32m          },[m
+[32m+[m[32m          "sensitive_attributes": [[m
+[32m+[m[32m            [[m
+[32m+[m[32m              {[m
+[32m+[m[32m                "type": "get_attr",[m
+[32m+[m[32m                "value": "sensitive_content"[m
+[32m+[m[32m              }[m
+[32m+[m[32m            ][m
+[32m+[m[32m          ],[m
+[32m+[m[32m          "identity_schema_version": 0[m
+[32m+[m[32m        }[m
+[32m+[m[32m      ][m
+[32m+[m[32m    }[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  "check_results": null[m
+[32m+[m[32m}[m
+[1mdiff --git a/terraform.tfstate.backup b/terraform.tfstate.backup[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a581b54[m
+[1m--- /dev/null[m
+[1m+++ b/terraform.tfstate.backup[m
+[36m@@ -0,0 +1,51 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "version": 4,[m
+[32m+[m[32m  "terraform_version": "1.14.0",[m
+[32m+[m[32m  "serial": 4,[m
+[32m+[m[32m  "lineage": "beef9393-0982-800f-dce5-7fb77c8ac38f",[m
+[32m+[m[32m  "outputs": {[m
+[32m+[m[32m    "output1": {[m
+[32m+[m[32m      "value": "arpita.html",[m
+[32m+[m[32m      "type": "string"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "resources": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "mode": "managed",[m
+[32m+[m[32m      "type": "local_file",[m
+[32m+[m[32m      "name": "myfile",[m
+[32m+[m[32m      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",[m
+[32m+[m[32m      "instances": [[m
+[32m+[m[32m        {[m
+[32m+[m[32m          "schema_version": 0,[m
+[32m+[m[32m          "attributes": {[m
+[32m+[m[32m            "content": "hi this is file created by arpita",[m
+[32m+[m[32m            "content_base64": null,[m
+[32m+[m[32m            "content_base64sha256": "kmry2rN8OCB4+eYxuLGxNrL/HEgEMPL//CRcUSCft7A=",[m
+[32m+[m[32m            "content_base64sha512": "AJMSKwPkuV54/qVG0w4yzi1dAgVkQ+eqnRc183SR4GL8o9jS7XPOfS199TUaYgqrGfYztvMHFQV65PsbOA6hFA==",[m
+[32m+[m[32m            "content_md5": "45e236b9de52a0e8cfeb7409bd79b592",[m
+[32m+[m[32m            "content_sha1": "9b023878d497eba26a12582080d86dc77223a76f",[m
+[32m+[m[32m            "content_sha256": "926af2dab37c382078f9e631b8b1b136b2ff1c480430f2fffc245c51209fb7b0",[m
+[32m+[m[32m            "content_sha512": "0093122b03e4b95e78fea546d30e32ce2d5d02056443e7aa9d1735f37491e062fca3d8d2ed73ce7d2d7df5351a620aab19f633b6f30715057ae4fb1b380ea114",[m
+[32m+[m[32m            "directory_permission": "0777",[m
+[32m+[m[32m            "file_permission": "0777",[m
+[32m+[m[32m            "filename": "arpita.html",[m
+[32m+[m[32m            "id": "9b023878d497eba26a12582080d86dc77223a76f",[m
+[32m+[m[32m            "sensitive_content": null,[m
+[32m+[m[32m            "source": null[m
+[32m+[m[32m          },[m
+[32m+[m[32m          "sensitive_attributes": [[m
+[32m+[m[32m            [[m
+[32m+[m[32m              {[m
+[32m+[m[32m                "type": "get_attr",[m
+[32m+[m[32m                "value": "sensitive_content"[m
+[32m+[m[32m              }[m
+[32m+[m[32m            ][m
+[32m+[m[32m          ],[m
+[32m+[m[32m          "identity_schema_version": 0[m
+[32m+[m[32m        }[m
+[32m+[m[32m      ][m
+[32m+[m[32m    }[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  "check_results": null[m
+[32m+[m[32m}[m
